@@ -1,19 +1,36 @@
-class Storage{
-    #items = [];
-    constructor(items){
-    this.#items = items;
-    }
+// class Storage{
+//     #items = [];
+//     constructor(items){
+//     this.#items = items;
+//     }
     
-    getItems(){
+//     getItems(){
+//         return this.#items;
+//     }
+//     addItem(newItem){
+//         this.#items.push(newItem)
+//     }
+//     removeItem(itemToRemove) {
+//         if (this.#items.includes(itemToRemove)) {
+//             this.#items.splice(this.#items.indexOf(itemToRemove), 1);
+//         }
+        
+//     }
+// }
+class Storage {
+    #items = [];
+    constructor(items) {
+        this.#items = items;
+    }
+    getItems(items) {
         return this.#items;
     }
-    addItem(newItem){
-        this.#items.push(newItem)
+    addItem(newItem) {
+        this.#items.push(newItem);
     }
     removeItem(itemToRemove) {
-        if (this.#items.includes(itemToRemove)) {
-            this.#items.splice(this.#items.indexOf(itemToRemove), 1);
-        }
+        this.#items = 
+            this.#items.filter(item =>item !== itemToRemove); 
         
     }
 }
